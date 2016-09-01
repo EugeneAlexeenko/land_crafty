@@ -3,18 +3,351 @@
 @import "libs"
 
 //Custom styles here
-.latoBold
-	font-family: $default-font
-	font-weight: bold
 
-.font-amplify
-	font-family: $font-amplify
+//no gutter trick
+.row.no-gutters
+  margin-right: 0
+  margin-left: 0
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"]
+  padding-right: 0
+  padding-left: 0
 
-.font-socialico
-	font-family: $font-socialico
+//      header        //////////////////////////////////
 
-.font-avantGardeLt
-	font-family: $font-avantgardelt
+.main-header
+  background-color: $bg-header-menu
+  color: $white
+
+.main-navigation
+  color: $white
+  &__brand
+    position: relative
+    margin-right: 71px
+    line-height: 80px
+    font-size: 40px
+    font-family: $font-amplify
+    color: $white
+  &__brand:after
+    content: ''
+    position: absolute
+    top: 0
+    left: 100px
+    width: 1px
+    height: 40px
+    background: #404040
+  &__brand:hover
+    color: #c3c3c3
+    text-decoration: none
+  &__items
+    li
+      height: 80px
+      padding: 0
+    li a
+      display: block
+      height: 100%
+      padding: 0 20px
+      padding-top: 29px
+      font-size: 16px
+      font-family: $default-font
+      color: $white
+      text-transform: capitalize
+    li a:hover
+      background: $bg-header-menu
+      color: #c3c3c3
+  &__social
+    li
+      width: 35px
+      height: 35px
+      margin-left: 10px
+      border: 2px solid $white
+      margin-top: 22px
+    li a
+      display: block
+      height: 100%
+      padding: 0
+      padding-top: 6px
+      text-align: center
+      font-size: 20px
+      color: $white
+      font-family: $font-socialico
+    li a:hover
+      background: none
+    li:hover a
+      color: #c3c3c3
+
+
+//////////////////////      MAIN-SLIDER    //////////////////////
+.top-slider
+  position: relative
+  height: 500px
+  margin-bottom: -20px
+  &__content
+    position: absolute
+    top: 222px
+    right: 100px
+    width: 600px
+  &__content h2
+    display: inline-block
+    padding: 15px 20px
+    margin: 0
+    margin-bottom: 2px
+    font-size: 35px
+    line-height: 50px
+    font-family: $font-avantgardelt
+    text-transform: uppercase
+    background: #eff3f5
+    opacity: 0.6
+    color: #000
+
+%top-slider__image
+  height: 580px
+  background-repeat: no-repeat
+  background-position: left center
+  background-size: cover
+
+.top-slider__image-1
+  @extend %top-slider__image
+  background-image: url(../img/img-slider.jpg)
+
+.top-slider__image-2
+  @extend %top-slider__image
+  background-image: url(../img/img-slider-2.jpg)
+
+//////////      MAIN-SLIDER END //////////////////////////////////////
+
+
+///////////////////        FEATURES  SECTION       ///////////////////
+.features
+  padding-top: 100px
+  background: $bg-features
+
+%features__item
+  position: relative
+  padding-left: 100px
+  margin-bottom: 100px
+  font-family: $default-font
+  h3
+    font-size: 22px
+    font-weight: bold
+    color: #767676
+  p
+    font-size: 15px
+    font-weight: 400
+    line-height: 20px
+    color: #9e9e9e
+  a
+    font-size: 15px
+    line-height: 20px
+    color: #848484
+
+%features__item:before
+  content: ''
+  position: absolute
+  top: 0
+  left: 0
+  width: 64px
+  height: 64px
+  background-color: $bg-btn-green
+  background-repeat: no-repeat
+  border-radius: 50%
+
+@for $i from 1 through 6
+  .features__item-#{$i}
+    @extend %features__item
+  .features__item-#{$i}:before
+    @extend %features__item:before
+
+.features__item-1:before
+  background-image: url(../img/ico-paintbrush.svg)
+  background-position: 17px 19px
+.features__item-2:before
+  background-image: url(../img/ico-display.svg)
+  background-position: 17px 19px
+.features__item-3:before
+  background-image: url(../img/ico-paper.svg)
+  background-position: 17px 19px
+.features__item-4:before
+  background-image: url(../img/ico-lock.svg)
+  background-position: 20px 15px
+.features__item-5:before
+  background-image: url(../img/ico-globe.svg)
+  background-position: 17px 19px
+.features__item-6:before
+  background-image: url(../img/ico-camera.svg)
+  background-position: 17px 19px
+
+////////////////////// FEATURES SECTION END ////////////////////////////
+
+
+
+//////////////       TESTIMONIALS SECTION      /////////////////
+.slider-testimonials
+  .item
+    padding-top: 140px
+    padding-bottom: 140px
+    min-height: 572px
+    text-align: center
+    &:before
+      position: absolute
+      top: 0
+      left: 50%
+      margin-left: -6.5px
+      width: 13px
+      height: 101px
+      content: ''
+      background: url(../img/bg-divider.png)
+    &:after
+      position: absolute
+      bottom: 0
+      left: 50%
+      margin-left: -6.5px
+      width: 13px
+      height: 101px
+      content: ''
+      background: url(../img/bg-divider.png)
+      transform: rotate(180deg)
+  .item-caption
+    font-family: $default-font
+    color: #000
+    text-shadow: none
+    h3
+      margin-top: 0
+      margin-bottom: 84px
+      font-size: 26px
+      color: #4f4f4f
+    p
+      margin-bottom: 43px
+      font-size: 20px
+      color: #8f8e8e
+      line-height: 32px
+    .author
+      font-size: 16px
+      font-weight: bold
+      color: #696767
+
+  .carousel-indicators
+    bottom: 120px
+    %li-shape
+      margin: 0 10px
+      width: 13px
+      height: 13px
+      border: none
+      border-radius: 50%
+    li
+      @extend %li-shape
+      background: #dadada
+    li.active
+      @extend %li-shape
+      background: #bebebe
+////////////// TESTIMONIALS SECTION  END////////////
+
+
+////////////// INFO SECTION ///////////////////////
+.info
+  height: 406px
+  background: $bg-content-grey
+  font-family: $default-font
+  &__image-wrapper
+    height: 406px
+    background: $bg-content-grey url(../img/img-tits.jpg)
+    background-size: cover
+  &__content-wrapper
+    padding:
+      top: 76px
+      left: 40px
+      right: 45px
+  h2
+    margin: 0
+    margin-bottom: 50px
+    font-size: 30px
+    line-height: 40px
+    font-weight: 700
+    color: $white
+    text-transform: uppercase
+  p
+    font-size: 16px
+    line-height: 32px
+    margin-bottom: 40px
+    color: #eeeeee
+  a
+    color: $white
+////////////// INFO SECTION END///////////////////////
+
+
+////////////// BUY SECTION ///////////////////////
+.buy-section
+  position: relative
+  padding-top: 100px
+  text-align: center
+  font-family: $default-font
+.buy-section__content
+  h2
+    margin: 0
+    margin-bottom: 20px
+    font-size: 34px
+    color: #6b6b6b
+    font-weight: 700
+    text-transform: uppercase
+  p
+    margin: 0
+    margin-bottom: 59px
+    color: #7f7d7d
+    font-size: 17px
+    line-height: 20px
+  .signUp-btn
+    display: inline-block
+    width: 261px
+    height: 55px
+    margin-bottom: 100px
+    font-size: 20px
+    font-family: $default-font
+    text-transform: uppercase
+    background: $bg-btn-green
+    color: $white
+    border: none
+    border-radius: 1px
+    &:hover,
+    &:focus,
+    &:active
+      outline: none
+  &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 50%
+    margin-left: -0.5px
+    width: 1px
+    height: 100px
+    background: #dedede
+////////////// BUY SECTION END///////////////////////
+
+
+////////////// FOOTER ///////////////////////
+.main-footer
+  margin-bottom: 0
+  padding: 98px 0
+  background: $bg-features
+  border-top: 1px solid #dedede
+  text-align: center
+.footer__brand
+  margin: 0
+  margin-bottom: 32px
+  text-transform: capitalize
+  font-size: 40px
+  font-family: $font-amplify
+.footer__copy
+  margin: 0
+  line-height: 20px
+  font-family: $default-font
+  font-size: 14px
+  span
+    font-family: $default-font
+    font-weight: 700
+////////////// FOOTER END///////////////////////
+
+
+
 
 
 @import "media"

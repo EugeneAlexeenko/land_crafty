@@ -52,6 +52,8 @@ gulp.task('headersass', function() {
 gulp.task('libs', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+        'app/libs/bootstrap/dist/js/bootstrap.min.js',
+        'app/libs/unslider-master/dist/js/unslider-min.js'
 		// 'app/libs/magnific-popup/magnific-popup.min.js'
 		])
 		.pipe(concat('libs.min.js'))
@@ -91,8 +93,11 @@ gulp.task('removedist', function() { return del.sync('dist'); });
 gulp.task('build', ['removedist', 'buildhtml', 'imagemin', 'sass', 'libs'], function() {
 
 	var buildCss = gulp.src([
-		'app/css/fonts.min.css',
-		'app/css/main.min.css'
+        'app/css/bootstrap.min.css',
+        'app/css/fonts.min.css',
+		'app/css/main.min.css',
+        'app/css/unslider',
+        'app/css/unslider-dots'
 		]).pipe(gulp.dest('dist/css'));
 
 	var buildFiles = gulp.src([
