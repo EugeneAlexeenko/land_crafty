@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<title>Title</title>
+	<title>Crafty</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -1587,52 +1587,49 @@
 
 <!-- Custom HTML -->
 
-<!--
-<p>Lorem ipsum dolor sit amet.</p>
-<p class="latoBold">Lorem ipsum dolor sit amet.</p>
-<p class="font-amplify">Lorem ipsum dolor sit amet.</p>
-<p class="font-socialico">Lorem ipsum dolor sit amet.</p>
-<p class="font-avantGardeLt">Lorem ipsum dolor sit amet.</p>
--->
-
-
 <!--HEADER-->
-
 <header class="main-header">
 	<div class="container">
 		<!--main-navigation-->
-		<nav class="main-navigation">
+		<div class="row">
+			<nav class="main-navigation">
 				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed"
-									data-toggle="collapse"
-									data-target="#navbar-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="main-navigation__brand" href="#">Crafty</a>
+				<div class="col-sm-3">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed"
+										data-toggle="collapse"
+										data-target="#navbar-collapse">
+							<i class="icon-menu"></i>
+						</button>
+						<a class="main-navigation__brand" href="#">Crafty</a>
+					</div>
 				</div>
-
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="navbar-collapse">
-					<ul class="main-navigation__items nav navbar-nav">
-						<li><a href="#">our story</a></li>
-						<li><a href="#">features</a></li>
-						<li><a href="#">journal</a></li>
-						<li><a href="#">contact us</a></li>
-					</ul>
-					<ul class="main-navigation__social nav navbar-nav navbar-right">
-						<li><a href="#">F</a></li>
-						<li><a href="#">L</a></li>
-						<li><a href="#">G</a></li>
-					</ul>
+					<div class="col-sm-6">
+						<ul class="main-navigation__items nav navbar-nav">
+							<li><a href="#">our story</a></li>
+							<li><a href="#">features</a></li>
+							<li><a href="#">journal</a></li>
+							<li><a href="#">contact us</a></li>
+						</ul>
+					</div>
+							
+					<div class="col-sm-3">
+						<ul class="main-navigation__social nav navbar-nav navbar-right">
+							<li><a href="#">F</a></li>
+							<li><a href="#">L</a></li>
+							<li><a href="#">G</a></li>
+						</ul>
+					</div>
+
 				</div><!-- /.navbar-collapse -->
-		</nav>
+			</nav>
+		</div> <!-- row -->
 	</div><!--container-->
 
 </header>
-
+<!--HEADER END-->
 
 <!--SECTION TOP-SLIDER -->
 <section class="top-slider">
@@ -1663,7 +1660,7 @@
 <section class="features">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-md-4 col-sm-6 col-xs-12">
 				<div class="features__item-1">
 				  <h3>Excepteur sint.</h3>
   				<p>Coccaecat cupidatat aliqu proident
@@ -1672,7 +1669,7 @@
   				<a href="#">more details  →</a>
 				</div>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4 col-sm-6 col-xs-12">
 				<div class="features__item-2">
 				  <h3>Excepteur sint.</h3>
   				<p>Coccaecat cupidatat aliqu proident
@@ -1681,7 +1678,7 @@
   				<a href="#">more details  →</a>
 				</div>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4 col-sm-6 col-xs-12">
 				<div class="features__item-3">
 					<h3>Excepteur sint.</h3>
 					<p>Coccaecat cupidatat aliqu proident
@@ -1690,7 +1687,7 @@
 					<a href="#">more details  →</a>
 				</div>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4 col-sm-6 col-xs-12">
 				<div class="features__item-4">
 					<h3>Excepteur sint.</h3>
 					<p>Coccaecat cupidatat aliqu proident
@@ -1699,7 +1696,7 @@
 					<a href="#">more details  →</a>
 				</div>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4 col-sm-6 col-xs-12">
 				<div class="features__item-5">
 					<h3>Excepteur sint.</h3>
 					<p>Coccaecat cupidatat aliqu proident
@@ -1708,7 +1705,7 @@
 					<a href="#">more details  →</a>
 				</div>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4 col-sm-6 col-xs-12">
 				<div class="features__item-6">
 					<h3>Excepteur sint.</h3>
 					<p>Coccaecat cupidatat aliqu proident
@@ -1769,10 +1766,10 @@
 <!--INFO SECTION-->
 <section class="info">
 	<div class="row no-gutters">
-		<div class="col-md-6 col-xs-6">
+		<div class="col-sm-6 col-xs-12">
 			<div class="info__image-wrapper"></div>
 		</div>
-		<div class="col-md-6 col-xs-6">
+		<div class="col-sm-6 col-xs-12">
 			<div class="info__content-wrapper">
 			  <h2>Sed do eiusmod tempor incididunt ut labore et dolore.</h2>
   			<p>Magna aliqua ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -1785,7 +1782,6 @@
 </section>
 <!--INFO SECTION END-->
 
-
 <!--BUY SECTION -->
 <section class="buy-section">
 	<div class="container">
@@ -1797,7 +1793,6 @@
 		</div>
 </section>
 <!--BUY SECTION END-->
-
 
 <!--FOOTER-->
 <footer class="main-footer">

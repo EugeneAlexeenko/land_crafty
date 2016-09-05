@@ -13,7 +13,7 @@
   padding-right: 0
   padding-left: 0
 
-//      header        //////////////////////////////////
+/////////////////   HEADER      //////////////////////////
 
 .main-header
   background-color: $bg-header-menu
@@ -39,6 +39,18 @@
   &__brand:hover
     color: #c3c3c3
     text-decoration: none
+  & button
+    margin: 0
+    margin-top: 13px
+    margin-right: -15px
+    padding: 0
+  & .icon-menu
+    padding: 5px
+    //margin-right: -25px
+    color: $white
+    font-size: 40px
+    //border: 2px solid $white
+    border-radius: 4px
   &__items
     li
       height: 80px
@@ -75,6 +87,7 @@
       background: none
     li:hover a
       color: #c3c3c3
+//////////// HEADER END      /////////////////////////////
 
 
 //////////////////////      MAIN-SLIDER    //////////////////////
@@ -103,16 +116,18 @@
 %top-slider__image
   height: 580px
   background-repeat: no-repeat
-  background-position: left center
+
   background-size: cover
 
 .top-slider__image-1
   @extend %top-slider__image
   background-image: url(../img/img-slider.jpg)
+  background-position: left center
 
 .top-slider__image-2
   @extend %top-slider__image
   background-image: url(../img/img-slider-2.jpg)
+  background-position: left top
 
 //////////      MAIN-SLIDER END //////////////////////////////////////
 
@@ -180,7 +195,6 @@
 ////////////////////// FEATURES SECTION END ////////////////////////////
 
 
-
 //////////////       TESTIMONIALS SECTION      /////////////////
 .slider-testimonials
   .item
@@ -245,7 +259,6 @@
 
 ////////////// INFO SECTION ///////////////////////
 .info
-  height: 406px
   background: $bg-content-grey
   font-family: $default-font
   &__image-wrapper
