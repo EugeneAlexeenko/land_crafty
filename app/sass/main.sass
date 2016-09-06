@@ -65,8 +65,8 @@
       color: $white
       text-transform: capitalize
     li a:hover
-      background: $bg-header-menu
-      color: #c3c3c3
+      background: $bg-btn-green
+      color: $bg-header-menu
   &__social
     display: block
     li
@@ -94,7 +94,7 @@
 //////////////////////      MAIN-SLIDER    //////////////////////
 .top-slider
   position: relative
-  height: 500px
+  height: 580px
   margin-bottom: -20px
   &__content
     position: absolute
@@ -117,7 +117,6 @@
 %top-slider__image
   height: 580px
   background-repeat: no-repeat
-
   background-size: cover
 
 .top-slider__image-1
@@ -197,7 +196,7 @@
 
 
 //////////////       TESTIMONIALS SECTION      /////////////////
-.slider-testimonials
+.testimonials
   .item
     padding-top: 140px
     padding-bottom: 140px
@@ -211,7 +210,7 @@
       width: 13px
       height: 101px
       content: ''
-      background: url(../img/bg-divider.png)
+      background: url(../img/bg-divider.png) no-repeat
     &:after
       position: absolute
       bottom: 0
@@ -220,7 +219,7 @@
       width: 13px
       height: 101px
       content: ''
-      background: url(../img/bg-divider.png)
+      background: url(../img/bg-divider.png) no-repeat
       transform: rotate(180deg)
   .item-caption
     font-family: $default-font

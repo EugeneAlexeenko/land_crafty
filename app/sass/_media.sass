@@ -6,20 +6,43 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px)
   /**/
-  body
+  .info
+    &__content-wrapper
+      padding:
+        top: 56px
+        left: 40px
+        right: 45px
+    h2
+      margin: 0
+      margin-bottom: 50px
+      font-size: 30px
+      line-height: 40px
+      font-weight: 700
+      color: $white
+      text-transform: uppercase
+    p
+      font-size: 16px
+      line-height: 32px
+      margin-bottom: 40px
+      color: #eeeeee
+    a
+      color: $white  
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px)
   /**/
-
+  
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px)
-  /////////////////   HEADER      //////////////////////////
+  /**/
+  ////HEADER////
   .main-navigation
     &__brand
       margin-right: 0
       margin-left: 30px
+    &__wrapper
+      //padding: 0
     &__items
       li
         height: 60px
@@ -39,8 +62,69 @@
           left: 0
       li:last-child
         margin-right: 0
-  //////////// HEADER END      /////////////////////////////
-  
+  ////HEADER END////
+
+  ////TOP-SLIDER////
+  .top-slider
+    height: 400px
+    &__content
+      bottom: 10px
+      right: 10%
+      //left: 200px
+      //right: 100px
+      width: 50%
+    &__content h2
+      padding: 5px 10px
+      margin: 0
+      margin-bottom: 2px
+      font-size: 20px
+      line-height: 30px
+  .top-slider__image-1,
+  .top-slider__image-2
+    height: 400px
+  ////TOP-SLIDER END///
+
+  ////FEATURES////
+  .features
+    padding-top: 60px
+    @for $i from 1 through 6
+      .features__item-#{$i}
+         margin-bottom: 40px
+  ////FEATURES END////
+
+  ////TESTIMONIALS////
+  .testimonials
+    .item
+      padding-top: 70px
+      padding-bottom: 70px
+      min-height: 400px
+      &:before
+        background-position: 0 -60px      
+      &:after
+        background-position: 0 -60px 
+    .item-caption
+      h3
+        margin-top: 0
+        margin-bottom: 44px
+        color: #4f4f4f
+      p
+        margin-bottom: 43px
+        font-size: 16px
+        line-height: 22px
+      .author
+        font-size: 16px
+        font-weight: bold
+        color: #696767
+    .carousel-indicators
+      bottom: 40px
+  ////TESTIMONIALS////
+
+
+
+
+
+
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px)
   /**/
