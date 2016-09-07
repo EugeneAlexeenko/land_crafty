@@ -266,10 +266,9 @@
     background: $bg-content-grey url(../img/img-tits.jpg)
     background-size: cover
   &__content-wrapper
-    padding:
-      top: 76px
-      left: 40px
-      right: 45px
+    max-width: 600px
+    height: 406px
+    padding: 76px 40px
   h2
     margin: 0
     margin-bottom: 50px
@@ -279,6 +278,8 @@
     color: $white
     text-transform: uppercase
   p
+    overflow: hidden
+    text-overflow: ellipsis
     font-size: 16px
     line-height: 32px
     margin-bottom: 40px
